@@ -9,17 +9,17 @@ package ru.satone.lessons;
  *
  * @author saton
  */
-public class Account {
+public class Account<T> implements Accountable<T>{
 
-    private int id;
+    private T id;
     private int sum;
 
-    public Account(int id, int sum) {
+    public Account(T id, int sum) {
         this.id = id;
         this.sum = sum;
     }
 
-    public int getId() {
+    public T getId() {
         return id;
     }
 
