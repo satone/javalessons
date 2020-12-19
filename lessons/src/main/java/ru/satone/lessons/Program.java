@@ -10,8 +10,36 @@ package ru.satone.lessons;
  * @author saton
  */
 public class Program {
+
     public static void main(String[] args) {
         Day current = Day.MONDAY;
         System.out.println(current);
+
+        Book b1 = new Book("War and Peace", "L. Tolstoy", Type.BELLETRE);
+        System.out.printf("Book '%s' has a type %s", b1.name, b1.bookType);
+        switch (b1.bookType) {
+            case BELLETRE:
+                System.out.println("Belletre");
+                break;
+            case SCIENCE:
+                System.out.println("Science");
+                break;
+            case SCIENCE_FICTION:
+                System.out.println("Science fiction");
+                break;
+            case PHANTASY:
+                System.out.println("Pahntasy");
+                break;
+            default:
+                throw new AssertionError();
+        }
+        System.out.println(Type.BELLETRE.ordinal());
+
+        Operation op = Operation.SUM;
+        System.out.println(op.action(10, 4));
+        op = Operation.MULTIPLY;
+        System.out.println(op.action(6, 4));
+        Person tom = new Person("Tom");
+        System.out.println(tom.toString());
     }
 }
