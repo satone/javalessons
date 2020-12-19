@@ -39,7 +39,10 @@ public class Program {
         System.out.println(op.action(10, 4));
         op = Operation.MULTIPLY;
         System.out.println(op.action(6, 4));
+        
         Person tom = new Person("Tom");
         System.out.println(tom.toString());
+        System.out.println(tom.hashCode());
+        System.out.println(tom.getClass());
     }
 }
